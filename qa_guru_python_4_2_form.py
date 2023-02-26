@@ -16,7 +16,7 @@ def browser_size_1680_1050():
     browser.config.hold_browser_open = True
 
 
-def test_form_1(browser_size_1280_920):
+def test_form_1(browser_size_1680_1050):
 #    browser.config.hold_browser_open = True
 
     browser.open('https://demoqa.com/automation-practice-form')
