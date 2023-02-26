@@ -23,7 +23,12 @@ def test_search_1(browser_size_1280_920):
 def test_search_2(browser_size_1680_1050):
     browser.open('https://google.com')
     browser.element('[name="q"]').should(be.blank).type('567777777777777755555555555').press_enter()
-    browser.element('.card-section').should(have.text('По запросу 567777777777777755555555555 ничего не найдено' or 'Your search - 567777777777777755555555555 - did not match any documents.'))
+    browser.element('[id="search"]').should(have.text('Selene - User-oriented Web UI browser tests in Python'))
+
+def test_search_3(browser_size_1280_920):
+    browser.open('https://google.com')
+    browser.element('[name="q"]').should(be.blank).type('567777777777777755555555555').press_enter()
+    browser.element('.card-section').should(have.text('ничего не найдено' or 'did not match any documents.'))
 
 def test_form_1(browser_size_1280_920):
 #    browser.config.hold_browser_open = True
