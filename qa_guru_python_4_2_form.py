@@ -1,8 +1,5 @@
 from selene.support.shared import browser
-from selene import be, have
-import pytest
-from selenium import webdriver
-
+from selene import have
 
 def test_form_1(browser_size_1680_1050):
 #    browser.config.hold_browser_open = True
